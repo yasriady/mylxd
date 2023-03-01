@@ -21,11 +21,11 @@ do
     echo "-------------------------------"
     # Sync
     echo lxc stop ${LOCALHOST}
-    # lxc stop ${LOCALHOST}
+    lxc stop ${LOCALHOST}
     echo lxc copy ${REMOTEHOST} ${LOCALHOST} --refresh
-    # lxc copy ${REMOTEHOST} ${LOCALHOST} --refresh
+    time lxc copy ${REMOTEHOST} ${LOCALHOST} --refresh
     echo lxc start ${LOCALHOST}
-    # lxc start ${LOCALHOST}
+    lxc start ${LOCALHOST}
     echo "==============================="
 done
 
